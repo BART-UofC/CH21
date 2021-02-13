@@ -16,8 +16,5 @@ _global_script_class_icons={
 [application]
 
 config/name="Hello Wold"
+run/main_scene="res://.import/Game.tscn"
 config/icon="res://icon.png"
-
-[rendering]
-
-environment/default_environment="res://default_env.tres"
