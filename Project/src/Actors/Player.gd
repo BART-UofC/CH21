@@ -8,8 +8,8 @@ func _on_EnemyDetector_area_entered(_area: Area2D) -> void:
 	
 func _on_EnemyDetector_body_entered(_body: Node) -> void:
 	queue_free()
-# warning-ignore:return_value_discarded
 	get_tree().reload_current_scene()
+# warning-ignore:return_value_discarded
 
 
 func _physics_process(_delta: float) -> void:
