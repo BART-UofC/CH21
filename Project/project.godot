@@ -22,6 +22,7 @@ _global_script_class_icons={
 
 config/name="Hello Wold"
 run/main_scene="res://src/Levels/LevelTemplate.tscn"
+boot_splash/image="res://assets/pain.png"
 config/icon="res://icon.png"
 
 [display]

@@ -66,35 +66,57 @@ limit_right = 4955
 
 [node name="Enemy" parent="." instance=ExtResource( 3 )]
 position = Vector2( 1577, 819 )
+speed = Vector2( 300, 1000 )
+gravity = 3000.0
 
 [node name="Enemy2" parent="." instance=ExtResource( 3 )]
 position = Vector2( 4438, 335 )
+speed = Vector2( 300, 1000 )
+gravity = 3000.0
 
 [node name="Enemy3" parent="." instance=ExtResource( 3 )]
 position = Vector2( 4278, 420 )
+speed = Vector2( 300, 1000 )
+gravity = 3000.0
 
 [node name="Enemy4" parent="." instance=ExtResource( 3 )]
 position = Vector2( 4139, 591 )
+speed = Vector2( 300, 1000 )
+gravity = 3000.0
 
 [node name="Enemy5" parent="." instance=ExtResource( 3 )]
 position = Vector2( 3958, 735 )
+speed = Vector2( 300, 1000 )
+gravity = 3000.0
 
 [node name="Enemy6" parent="." instance=ExtResource( 3 )]
 position = Vector2( 3632, 826 )
+speed = Vector2( 300, 1000 )
+gravity = 3000.0
 
 [node name="Enemy7" parent="." instance=ExtResource( 3 )]
 position = Vector2( 4748, 858 )
+speed = Vector2( 300, 1000 )
+gravity = 3000.0
 
 [node name="Enemy8" parent="." instance=ExtResource( 3 )]
 position = Vector2( 2783, 831 )
+speed = Vector2( 300, 1000 )
+gravity = 3000.0
 
 [node name="Enemy9" parent="." instance=ExtResource( 3 )]
 position = Vector2( 1300, 495 )
+speed = Vector2( 300, 1000 )
+gravity = 3000.0
 
 [node name="Enemy10" parent="." instance=ExtResource( 3 )]
 position = Vector2( 543, 775 )
+speed = Vector2( 300, 1000 )
+gravity = 3000.0
 
 [node name="Enemy11" parent="." instance=ExtResource( 3 )]
 position = Vector2( 930, 506 )
+speed = Vector2( 300, 1000 )
+gravity = 3000.0
 
 [editable path="Player"]
