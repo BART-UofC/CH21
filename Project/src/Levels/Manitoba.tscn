@@ -8,7 +8,7 @@
 [ext_resource path="res://assets/backgrounds/toba.png" type="Texture" id=6]
 [ext_resource path="res://assets/tileset.png" type="Texture" id=7]
 [ext_resource path="res://assets/background.png" type="Texture" id=8]
-[ext_resource path="res://assets/mcgill.png" type="Texture" id=9]
+[ext_resource path="res://assets/polar.png" type="Texture" id=9]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 80, 0, 80, 80, 0, 80 )
@@ -132,9 +132,33 @@ limit_right = 4955
 [node name="Enemy2" parent="." instance=ExtResource( 4 )]
 position = Vector2( 2690.76, 636.159 )
 
-[node name="Sprite" type="Sprite" parent="Enemy2"]
-position = Vector2( 3.97327, 0.861477 )
-scale = Vector2( 1.86619, 2.58718 )
+[node name="polar" type="Sprite" parent="Enemy2"]
+position = Vector2( 2.43018, -1.85913 )
+scale = Vector2( 1.83433, 2.41324 )
+texture = ExtResource( 9 )
+
+[node name="Enemy3" parent="." instance=ExtResource( 4 )]
+position = Vector2( 3710.39, 843.205 )
+
+[node name="polar" type="Sprite" parent="Enemy3"]
+position = Vector2( 2.43018, -1.85913 )
+scale = Vector2( 1.83433, 2.41324 )
+texture = ExtResource( 9 )
+
+[node name="Enemy4" parent="." instance=ExtResource( 4 )]
+position = Vector2( 4079.1, 725.501 )
+
+[node name="polar" type="Sprite" parent="Enemy4"]
+position = Vector2( 2.43018, -1.85913 )
+scale = Vector2( 1.83433, 2.41324 )
+texture = ExtResource( 9 )
+
+[node name="Enemy5" parent="." instance=ExtResource( 4 )]
+position = Vector2( 4544.25, 792.152 )
+
+[node name="polar" type="Sprite" parent="Enemy5"]
+position = Vector2( 2.43018, -1.85913 )
+scale = Vector2( 1.83433, 2.41324 )
 texture = ExtResource( 9 )
 
 [node name="Void" parent="." instance=ExtResource( 2 )]
@@ -145,29 +169,5 @@ scale = Vector2( 100, -0.176 )
 [node name="Portal" parent="." instance=ExtResource( 1 )]
 position = Vector2( 4886.51, 828.863 )
 nextLevel = "res://src/Levels/Level3.tscn"
-
-[node name="Enemy6" parent="." instance=ExtResource( 4 )]
-position = Vector2( 3861.3, 592.581 )
-
-[node name="Sprite2" type="Sprite" parent="Enemy6"]
-position = Vector2( 4.13306, 1.00516 )
-scale = Vector2( 1.86619, 2.58718 )
-texture = ExtResource( 9 )
-
-[node name="Enemy8" parent="." instance=ExtResource( 4 )]
-position = Vector2( 4526, 638.175 )
-
-[node name="Sprite3" type="Sprite" parent="Enemy8"]
-position = Vector2( 4.46875, 0.383667 )
-scale = Vector2( 1.86619, 2.58718 )
-texture = ExtResource( 9 )
-
-[node name="Enemy7" parent="." instance=ExtResource( 4 )]
-position = Vector2( 3656.13, 741.36 )
-
-[node name="Sprite4" type="Sprite" parent="Enemy7"]
-position = Vector2( 5.55005, 0.129639 )
-scale = Vector2( 1.86619, 2.58718 )
-texture = ExtResource( 9 )
 
 [editable path="Player"]
