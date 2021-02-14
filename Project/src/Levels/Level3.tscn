@@ -1,20 +1,20 @@
 [gd_scene load_steps=11 format=2]
 
+[ext_resource path="res://assets/mountains.png" type="Texture" id=1]
 [ext_resource path="res://src/Actors/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://src/Actors/Enemy.tscn" type="PackedScene" id=3]
-[ext_resource path="res://assets/background.png" type="Texture" id=4]
 [ext_resource path="res://src/Actors/Spikes.tscn" type="PackedScene" id=5]
 [ext_resource path="res://src/Actors/Portal.tscn" type="PackedScene" id=6]
 [ext_resource path="res://src/Actors/Void.tscn" type="PackedScene" id=7]
 [ext_resource path="res://assets/Platform Tilesets-1.png" type="Texture" id=8]
 
-[sub_resource type="ConvexPolygonShape2D" id=4]
+[sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 80, 160, 0.312988, 160, 0.312988, 0.86499, 80, 0.86499 )
 
-[sub_resource type="ConvexPolygonShape2D" id=5]
+[sub_resource type="ConvexPolygonShape2D" id=2]
 points = PoolVector2Array( 80, 160, 0.312988, 160, 0.312988, 0.86499, 80, 0.86499 )
 
-[sub_resource type="TileSet" id=2]
+[sub_resource type="TileSet" id=3]
 1/name = "Platform Tilesets-1.png 1"
 1/texture = ExtResource( 8 )
 1/tex_offset = Vector2( 0, 0 )
@@ -25,14 +25,14 @@ points = PoolVector2Array( 80, 160, 0.312988, 160, 0.312988, 0.86499, 80, 0.8649
 1/navigation_offset = Vector2( 0, 0 )
 1/shape_offset = Vector2( 0, 0 )
 1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-1/shape = SubResource( 4 )
+1/shape = SubResource( 1 )
 1/shape_one_way = false
 1/shape_one_way_margin = 1.0
 1/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 4 ),
+"shape": SubResource( 1 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 1/z_index = 0
@@ -46,14 +46,14 @@ points = PoolVector2Array( 80, 160, 0.312988, 160, 0.312988, 0.86499, 80, 0.8649
 2/navigation_offset = Vector2( 0, 0 )
 2/shape_offset = Vector2( 0, 0 )
 2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-2/shape = SubResource( 5 )
+2/shape = SubResource( 2 )
 2/shape_one_way = false
 2/shape_one_way_margin = 1.0
 2/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 5 ),
+"shape": SubResource( 2 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 2/z_index = 0
@@ -85,19 +85,17 @@ nextLevel = "src/Levels/Level1.tscn"
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = -1
 
-[node name="background" type="TextureRect" parent="CanvasLayer"]
-margin_top = -2953.21
-margin_right = 4958.0
-margin_bottom = -1839.21
-rect_scale = Vector2( 1.48, 3.64 )
-texture = ExtResource( 4 )
-stretch_mode = 1
+[node name="MountainBackground" type="TextureRect" parent="CanvasLayer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 1 )
+expand = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="TileMap" type="TileMap" parent="."]
-tile_set = SubResource( 2 )
+tile_set = SubResource( 3 )
 cell_size = Vector2( 80, 80 )
 cell_quadrant_size = 5
 cell_custom_transform = Transform2D( 24, 0, 12, 24, 0, 0 )
