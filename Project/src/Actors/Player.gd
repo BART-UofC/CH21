@@ -4,7 +4,8 @@ extends Actor
 
 export var stomp_impulse:  = 1000.0
 export var velocity_cutoff = 0.5
-export var linear_accel = 0.2
+export var acceleration = 0.1
+export var friction = 0.2
 #  velocity cutoff allows us to gradually decrease the vel of interrupted jump
 
 var direction: = Vector2.ZERO
@@ -50,8 +51,6 @@ func calculate_move_velocity(linear_velocity: Vector2,
 							) -> Vector2:
 								
 	var out: = linear_velocity
-	out.x = speed.x * direction.x
-	out.x *= linear_accel
 	out.y += gravity * get_physics_process_delta_time()
 	
 	if direction_in.y == -1.0:
@@ -60,6 +59,16 @@ func calculate_move_velocity(linear_velocity: Vector2,
 	if is_jump_interrupted:
 		out.y *= velocity_cutoff
 		# player movement was to clucky when this was 0.0
+		
+	if direction_in.x < 0:
+		out.x = out.linear_interpolate(-speed, acceleration).x
+		print(out.x)
+	elif direction_in.x > 0:
+		out.x = out.linear_interpolate(speed, acceleration).x
+		print(out.x)
+	else:
+		# If there's no input, slow down to (0, 0)
+		out.x = out.linear_interpolate(Vector2.ZERO, friction).x
 	
 	return out
 

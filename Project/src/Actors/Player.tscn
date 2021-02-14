@@ -16,7 +16,8 @@ speed = Vector2( 800, 2000 )
 gravity = 6000.0
 stomp_impulse = 1400.0
 velocity_cutoff = 0.2
-linear_accel = 1.1
+acceleration = 1.5
+friction = 0.25
 
 [node name="pain" type="Sprite" parent="."]
 position = Vector2( 3, -9 )
