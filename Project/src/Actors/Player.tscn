@@ -12,7 +12,10 @@ extents = Vector2( 14.2029, 12.7242 )
 [node name="Player" type="KinematicBody2D"]
 collision_mask = 8
 script = ExtResource( 2 )
-speed = Vector2( 800, 1500 )
+speed = Vector2( 800, 2000 )
+gravity = 6000.0
+stomp_impulse = 1400.0
+velocity_cutoff = 0.2
 
 [node name="pain" type="Sprite" parent="."]
 position = Vector2( 2.23636, -1.66527 )
@@ -20,8 +23,8 @@ scale = Vector2( 4, 4 )
 texture = ExtResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( -8, 56 )
-scale = Vector2( 26.8589, 26.3399 )
+position = Vector2( -7.62939e-06, 107 )
+scale = Vector2( 26.5789, 24.4999 )
 shape = SubResource( 1 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -40,6 +43,8 @@ drag_margin_top = 0.75
 drag_margin_right = 0.0
 
 [node name="EnemyDetector" type="Area2D" parent="."]
+position = Vector2( -8, 222 )
+scale = Vector2( 1.04, 0.56 )
 monitorable = false
 collision_layer = 0
 collision_mask = 2

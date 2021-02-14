@@ -9,8 +9,11 @@ export var velocity_cutoff = 0.5
 var direction: = Vector2.ZERO
 onready var sprite: Sprite = get_node("pain")
 
-func _on_EnemyDetector_area_entered(_area: Area2D) -> void:
-	_velocity = calculate_stomp_velocity(_velocity, stomp_impulse)
+func _on_EnemyDetector_area_entered(area: Area2D) -> void:
+	
+	if (area.name == "StompDetector"):
+		area.get_parent().die()
+		_velocity = calculate_stomp_velocity(_velocity, stomp_impulse)
 	
 func _on_EnemyDetector_body_entered(_body: Node) -> void:
 	queue_free()
@@ -33,7 +36,7 @@ func _physics_process(_delta: float) -> void:
 		
 	
 func get_direction() -> Vector2:
-	
+		
 	return Vector2(
 	Input.get_action_strength("move_right") - Input.get_action_strength("move_left"), 
 	-Input.get_action_strength("jump") if is_on_floor() and Input.is_action_just_pressed("jump") else 0.0
