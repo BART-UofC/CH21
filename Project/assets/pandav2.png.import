@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/dino_transparent.png-a1c23f47a5087d701174f0bc20cbec3e.stex"
+path="res://.import/pandav2.png-50ef54a2142c452bd081915575401854.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/dino_transparent.png"
-dest_files=[ "res://.import/dino_transparent.png-a1c23f47a5087d701174f0bc20cbec3e.stex" ]
+source_file="res://assets/pandav2.png"
+dest_files=[ "res://.import/pandav2.png-50ef54a2142c452bd081915575401854.stex" ]
 
 [params]
 

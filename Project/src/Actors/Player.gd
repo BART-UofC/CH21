@@ -4,6 +4,7 @@ extends Actor
 
 export var stomp_impulse:  = 1000.0
 export var velocity_cutoff = 0.5
+export var linear_accel = 0.2
 #  velocity cutoff allows us to gradually decrease the vel of interrupted jump
 
 var direction: = Vector2.ZERO
@@ -11,7 +12,7 @@ onready var sprite: Sprite = get_node("pain")
 
 func _on_EnemyDetector_area_entered(area: Area2D) -> void:
 	
-	if (area.name == "StompDetector"):
+	if (area.name == "StompDetector") && (not is_on_floor()):
 		area.get_parent().die()
 		_velocity = calculate_stomp_velocity(_velocity, stomp_impulse)
 	
@@ -50,6 +51,7 @@ func calculate_move_velocity(linear_velocity: Vector2,
 								
 	var out: = linear_velocity
 	out.x = speed.x * direction.x
+	out.x *= linear_accel
 	out.y += gravity * get_physics_process_delta_time()
 	
 	if direction_in.y == -1.0:

@@ -16,9 +16,10 @@ speed = Vector2( 800, 2000 )
 gravity = 6000.0
 stomp_impulse = 1400.0
 velocity_cutoff = 0.2
+linear_accel = 1.1
 
 [node name="pain" type="Sprite" parent="."]
-position = Vector2( 2.23636, -1.66527 )
+position = Vector2( 3, -9 )
 scale = Vector2( 4, 4 )
 texture = ExtResource( 1 )
 
@@ -28,20 +29,17 @@ scale = Vector2( 26.5789, 24.4999 )
 shape = SubResource( 1 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2( 0, -239 )
+position = Vector2( -1.90735e-06, -6.10352e-05 )
 scale = Vector2( -0.079998, 1 )
 current = true
 limit_left = 0
-limit_top = 0
-limit_bottom = 1037
+limit_top = -2000
+limit_bottom = 1040
 limit_smoothed = true
-drag_margin_h_enabled = true
 drag_margin_v_enabled = true
 smoothing_enabled = true
-offset_v = -0.39
-drag_margin_left = 0.0
-drag_margin_top = 0.75
-drag_margin_right = 0.0
+offset_v = -1.0
+drag_margin_right = 0.1
 
 [node name="EnemyDetector" type="Area2D" parent="."]
 position = Vector2( -8, 222 )

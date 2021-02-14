@@ -39,4 +39,3 @@ collision_layer = 2147483650
 position = Vector2( 2, 2 )
 scale = Vector2( 5.49298, 1.3009 )
 shape = SubResource( 2 )
-[connection signal="body_entered" from="StompDetector" to="." method="_on_StompDetector_body_entered"]

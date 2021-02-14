@@ -36,7 +36,7 @@ points = PoolVector2Array( 0, 0, 80, 0, 80, 80, 0, 80 )
 
 [node name="Level1" type="Node2D"]
 __meta__ = {
-"_edit_horizontal_guides_": [ 1037.0, -537.0 ],
+"_edit_horizontal_guides_": [ 1037.0, -537.0, -760.0 ],
 "_edit_vertical_guides_": [ 6001.0 ]
 }
 
