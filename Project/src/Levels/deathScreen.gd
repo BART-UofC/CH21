@@ -5,5 +5,4 @@ func _input(event):
 		get_tree().quit()
 	if event.is_action_pressed("restart"):
 		var prevScene: = "src/Levels/" + Global.currentScene + ".tscn"
-		print("Changing to: " + prevScene)
 		get_tree().change_scene(prevScene)

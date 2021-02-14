@@ -21,7 +21,6 @@ func _ready() -> void:
 	Global.currentScene = get_tree().get_current_scene().get_name()
 	
 func _on_EnemyDetector_body_entered(_body: Node) -> void:
-	print("died",Global.currentScene)
 	queue_free()
 # warning-ignore:return_value_discarded
 	get_tree().change_scene("src/Levels/deathScreen.tscn")
