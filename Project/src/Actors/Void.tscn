@@ -8,6 +8,7 @@ export var nextLevel = \"\"
 func _on_Area2D_body_entered(body: Node) -> void:
 	if body.name == \"Player\":
 		print(nextLevel)
+# warning-ignore:return_value_discarded
 		get_tree().change_scene(nextLevel)
 "
 
