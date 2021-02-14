@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://assets/tileset.png" type="Texture" id=1]
 [ext_resource path="res://src/Actors/Player.tscn" type="PackedScene" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://assets/backgrounds/montreal.png" type="Texture" id=8]
 [ext_resource path="res://assets/Textures/ground1.png" type="Texture" id=9]
 [ext_resource path="res://assets/mcgill.png" type="Texture" id=10]
+[ext_resource path="res://assets/montserrat_extrabold.otf" type="DynamicFontData" id=11]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 80, 0, 80, 80, 0, 80 )
@@ -61,7 +62,11 @@ points = PoolVector2Array( 0, 0, 80, 0, 80, 80, 0, 80 )
 } ]
 1/z_index = 0
 
-[node name="Roberto_Level_2" type="Node2D"]
+[sub_resource type="DynamicFont" id=4]
+size = 50
+font_data = ExtResource( 11 )
+
+[node name="LevelTemplate" type="Node2D"]
 __meta__ = {
 "_edit_horizontal_guides_": [  ],
 "_edit_vertical_guides_": [ 4955.0 ]
@@ -192,6 +197,17 @@ scale = Vector2( 100, -0.176 )
 
 [node name="Portal" parent="." instance=ExtResource( 6 )]
 position = Vector2( 2494.3, -738.141 )
-nextLevel = "res://src/Levels/Level1.tscn"
+
+[node name="Label" type="Label" parent="."]
+margin_left = 352.453
+margin_top = 493.884
+margin_right = 558.453
+margin_bottom = 555.884
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0.129412, 0.870588, 0.25098, 1 )
+text = "Quebec"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [editable path="Player"]
