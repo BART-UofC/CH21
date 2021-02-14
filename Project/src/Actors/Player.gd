@@ -25,6 +25,9 @@ func _on_EnemyDetector_body_entered(_body: Node) -> void:
 # loops every frame
 # all looping logic should be placed here
 func _physics_process(_delta: float) -> void:
+	if Input.is_action_just_pressed("jump"):
+		$JumpNoise.play()
+		
 	var is_jump_interrupted: = Input.is_action_just_released("jump") and _velocity.y < 0.0
 	direction = get_direction()
 	_velocity = calculate_move_velocity(_velocity, direction, speed, is_jump_interrupted)

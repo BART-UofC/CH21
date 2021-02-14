@@ -24,6 +24,10 @@ config/name="Hello Wold"
 run/main_scene="res://src/Levels/LevelTemplate.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+AudioController="*res://autoloads/AudioController.tscn"
+
 [display]
 
 window/size/width=1920
