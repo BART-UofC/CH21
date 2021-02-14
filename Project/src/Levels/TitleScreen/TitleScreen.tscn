@@ -1,0 +1,133 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://src/Levels/TitleScreen/Buttons/NewGameButton.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/Provincial Combat Play.png" type="Texture" id=2]
+[ext_resource path="res://assets/montserrat_extrabold.otf" type="DynamicFontData" id=3]
+[ext_resource path="res://src/Levels/TitleScreen/Buttons/ContinueButton.tscn" type="PackedScene" id=4]
+[ext_resource path="res://src/Levels/TitleScreen/Buttons/ExitButton.tscn" type="PackedScene" id=5]
+[ext_resource path="res://assets/dino_transparent.png" type="Texture" id=6]
+[ext_resource path="res://assets/background.png" type="Texture" id=7]
+[ext_resource path="res://src/Levels/TitleScreen/title_screen.gd" type="Script" id=8]
+
+[sub_resource type="DynamicFont" id=1]
+size = 24
+font_data = ExtResource( 3 )
+
+[sub_resource type="Animation" id=2]
+resource_name = "Fade_In"
+step = 0.25
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ) ]
+}
+
+[node name="TitleScreen" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 2.66968
+margin_right = 2.0
+margin_bottom = 2.66968
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Menu" type="VBoxContainer" parent="."]
+margin_left = 120.0
+margin_top = 80.0
+margin_right = 1800.0
+margin_bottom = 1000.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Logo" type="TextureRect" parent="Menu"]
+margin_right = 1963.0
+margin_bottom = 218.0
+rect_min_size = Vector2( 100, 0 )
+texture = ExtResource( 2 )
+stretch_mode = 4
+
+[node name="CenterRow" type="HBoxContainer" parent="Menu"]
+margin_top = 222.0
+margin_right = 1963.0
+margin_bottom = 622.0
+size_flags_vertical = 3
+
+[node name="Buttons" type="VBoxContainer" parent="Menu/CenterRow"]
+margin_right = 657.0
+margin_bottom = 400.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 20
+alignment = 1
+
+[node name="NewGameButton" parent="Menu/CenterRow/Buttons" instance=ExtResource( 1 )]
+margin_right = 657.0
+scene_to_load = "res://src/Levels/Level1.tscn"
+
+[node name="ContinueButton" parent="Menu/CenterRow/Buttons" instance=ExtResource( 4 )]
+margin_top = 140.0
+margin_right = 657.0
+margin_bottom = 260.0
+
+[node name="ExitButton" parent="Menu/CenterRow/Buttons" instance=ExtResource( 5 )]
+margin_top = 280.0
+margin_right = 657.0
+margin_bottom = 400.0
+
+[node name="CenterContainer" type="CenterContainer" parent="Menu/CenterRow"]
+margin_left = 661.0
+margin_right = 1963.0
+margin_bottom = 400.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 1.98
+
+[node name="Characters" type="TextureRect" parent="Menu/CenterRow/CenterContainer"]
+margin_left = 451.0
+margin_right = 851.0
+margin_bottom = 400.0
+texture = ExtResource( 6 )
+
+[node name="VersionLabel" type="Label" parent="Menu"]
+margin_top = 626.0
+margin_right = 1963.0
+margin_bottom = 920.0
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 1 )
+text = "Version 1.0.0
+PCP Studio"
+
+[node name="FadeIn" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 0 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="FadeIn"]
+anims/Fade_In = SubResource( 2 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -1
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+anchor_left = -0.00123876
+anchor_right = 0.977928
+anchor_bottom = 0.962963
+margin_right = 40.0
+margin_bottom = 40.0
+texture = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
