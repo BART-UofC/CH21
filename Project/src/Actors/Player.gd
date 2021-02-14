@@ -19,7 +19,7 @@ func _on_EnemyDetector_area_entered(area: Area2D) -> void:
 	
 func _on_EnemyDetector_body_entered(_body: Node) -> void:
 	queue_free()
-	get_tree().reload_current_scene()
+	get_tree().change_scene("src/Levels/deathScreen.tscn")
 # warning-ignore:return_value_discarded
 
 # loops every frame
