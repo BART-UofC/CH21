@@ -97,7 +97,7 @@ tile_data = PoolIntArray( -262145, 1, 0, -327674, 1, 0, -196609, 1, 0, -262138, 
 
 [node name="Portal" parent="." instance=ExtResource( 6 )]
 position = Vector2( 5300, 810 )
-nextLevel = "src/Levels/Level2.tscn"
+nextLevel = "src/Levels/victoryScreen.tscn"
 
 [node name="Void" parent="." instance=ExtResource( 7 )]
 position = Vector2( 3434, 1150 )

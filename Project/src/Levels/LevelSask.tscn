@@ -88,7 +88,7 @@ __meta__ = {
 
 [node name="Portal" parent="." instance=ExtResource( 3 )]
 position = Vector2( 5232, 525 )
-nextLevel = "src/Levels/Level3.tscn"
+nextLevel = "src/Levels/LevelAlberta.tscn"
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = -1

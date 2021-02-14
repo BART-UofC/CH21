@@ -188,6 +188,7 @@ scale = Vector2( 100, -0.176 )
 
 [node name="Portal" parent="." instance=ExtResource( 5 )]
 position = Vector2( 2494.3, -738.141 )
+nextLevel = "src/Levels/LevelBC.tscn"
 
 [node name="Label" type="Label" parent="."]
 margin_left = 352.453
