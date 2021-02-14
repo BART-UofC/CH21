@@ -168,6 +168,6 @@ scale = Vector2( 100, -0.176 )
 
 [node name="Portal" parent="." instance=ExtResource( 1 )]
 position = Vector2( 4886.51, 828.863 )
-nextLevel = "res://src/Levels/Level3.tscn"
+nextLevel = "res://src/Levels/Level2.tscn"
 
 [editable path="Player"]

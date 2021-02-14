@@ -16,11 +16,13 @@ func _on_EnemyDetector_area_entered(area: Area2D) -> void:
 	if (area.name == "StompDetector") && (not is_on_floor()):
 		area.get_parent().die()
 		_velocity = calculate_stomp_velocity(_velocity, stomp_impulse)
-	
-func _on_EnemyDetector_body_entered(_body: Node) -> void:	
+
+func _ready() -> void:
 	Global.currentScene = get_tree().get_current_scene().get_name()
+	
+func _on_EnemyDetector_body_entered(_body: Node) -> void:
+	print("died",Global.currentScene)
 	queue_free()
-	get_tree().reload_current_scene()
 # warning-ignore:return_value_discarded
 	get_tree().change_scene("src/Levels/deathScreen.tscn")
 	# warning-ignore:return_value_discarded
