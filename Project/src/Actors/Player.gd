@@ -62,10 +62,8 @@ func calculate_move_velocity(linear_velocity: Vector2,
 		
 	if direction_in.x < 0:
 		out.x = out.linear_interpolate(-speed, acceleration).x
-		print(out.x)
 	elif direction_in.x > 0:
 		out.x = out.linear_interpolate(speed, acceleration).x
-		print(out.x)
 	else:
 		# If there's no input, slow down to (0, 0)
 		out.x = out.linear_interpolate(Vector2.ZERO, friction).x
