@@ -29,6 +29,7 @@ scale = Vector2( -0.079998, 1 )
 current = true
 limit_left = 0
 limit_top = 0
+limit_bottom = 1037
 limit_smoothed = true
 drag_margin_h_enabled = true
 drag_margin_v_enabled = true

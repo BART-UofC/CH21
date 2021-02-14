@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=2]
+
+[sub_resource type="GDScript" id=1]
+script/source = "extends Actor
+
+export var nextLevel = \"\"
+
+func _on_Area2D_body_entered(body: Node) -> void:
+	if body.name == \"Player\":
+		print(nextLevel)
+		get_tree().change_scene(nextLevel)
+"
+
+[sub_resource type="RectangleShape2D" id=2]
+
+[node name="Void" type="KinematicBody2D"]
+scale = Vector2( 1.76, 1.76 )
+collision_layer = 2
+collision_mask = 9
+script = SubResource( 1 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+scale = Vector2( 200, 1 )
+shape = SubResource( 2 )
