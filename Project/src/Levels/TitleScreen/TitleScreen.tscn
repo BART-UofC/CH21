@@ -90,3 +90,5 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 [connection signal="pressed" from="CanvasLayer/TextureRect/NewGameButton" to="." method="_on_NewGameButton_pressed"]
+[connection signal="pressed" from="CanvasLayer/TextureRect/ContinueButton" to="." method="_on_ContinueButton_pressed"]
+[connection signal="pressed" from="CanvasLayer/TextureRect/ExitButton" to="." method="_on_ExitButton_pressed"]
