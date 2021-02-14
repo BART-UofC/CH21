@@ -1,0 +1,186 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://assets/tileset.png" type="Texture" id=1]
+[ext_resource path="res://src/Actors/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://src/Actors/Enemy.tscn" type="PackedScene" id=3]
+[ext_resource path="res://assets/backgrounds/BCpixel.png" type="Texture" id=4]
+[ext_resource path="res://src/Actors/Spikes.tscn" type="PackedScene" id=5]
+[ext_resource path="res://src/Actors/Portal.tscn" type="PackedScene" id=6]
+[ext_resource path="res://src/Actors/Void.tscn" type="PackedScene" id=7]
+[ext_resource path="res://src/Levels/Level1.gd" type="Script" id=8]
+[ext_resource path="res://Sound/level_up.wav" type="AudioStream" id=9]
+[ext_resource path="res://assets/Textures/ground3.png" type="Texture" id=10]
+[ext_resource path="res://assets/thunderbird.png" type="Texture" id=11]
+[ext_resource path="res://assets/montserrat_extrabold.otf" type="DynamicFontData" id=12]
+
+[sub_resource type="ConvexPolygonShape2D" id=1]
+points = PoolVector2Array( 0, 0, 80, 0, 80, 80, 0, 80 )
+
+[sub_resource type="ConvexPolygonShape2D" id=2]
+points = PoolVector2Array( 0, 0, 80, 0, 80, 80, 0, 80 )
+
+[sub_resource type="TileSet" id=3]
+0/name = "tileset.png 0"
+0/texture = ExtResource( 1 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 80, 80 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape = SubResource( 1 )
+0/shape_one_way = false
+0/shape_one_way_margin = 1.0
+0/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 1 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+0/z_index = 0
+1/name = "ground3.png 1"
+1/texture = ExtResource( 10 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 0, 80, 80, 80 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape = SubResource( 2 )
+1/shape_one_way = false
+1/shape_one_way_margin = 1.0
+1/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 2 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+1/z_index = 0
+
+[sub_resource type="DynamicFont" id=4]
+size = 50
+outline_color = Color( 0.737255, 0.239216, 0.239216, 1 )
+font_data = ExtResource( 12 )
+
+[node name="Level1" type="Node2D"]
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_horizontal_guides_": [ 1037.0, -537.0, -760.0 ],
+"_edit_vertical_guides_": [ 6001.0 ]
+}
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -1
+
+[node name="OceanBackground" type="TextureRect" parent="CanvasLayer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 4 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource( 3 )
+cell_size = Vector2( 80, 80 )
+collision_layer = 8
+collision_mask = 2147483648
+format = 1
+tile_data = PoolIntArray( -262145, 1, 0, -327674, 1, 0, -196609, 1, 0, -262138, 1, 0, -131073, 1, 0, -196602, 1, 0, -65537, 1, 0, -131066, 1, 0, -1, 1, 0, -65530, 1, 0, -65528, 1, 0, -65527, 1, 0, -65526, 1, 0, 65535, 1, 0, 6, 1, 0, 7, 1, 0, 11, 1, 0, 12, 1, 0, 131071, 1, 0, 65536, 1, 0, 65537, 1, 0, 65538, 1, 0, 65542, 1, 0, 65548, 1, 0, 196607, 1, 0, 131072, 1, 0, 131073, 1, 0, 131074, 1, 0, 131075, 1, 0, 131078, 1, 0, 131082, 1, 0, 131084, 1, 0, 262143, 1, 0, 196608, 1, 0, 196609, 1, 0, 196610, 1, 0, 196611, 1, 0, 196612, 1, 0, 196617, 1, 0, 196618, 1, 0, 196620, 1, 0, 327679, 1, 0, 262144, 1, 0, 262145, 1, 0, 262146, 1, 0, 262147, 1, 0, 262148, 1, 0, 262149, 1, 0, 262150, 1, 0, 262152, 1, 0, 262153, 1, 0, 262156, 1, 0, 262190, 1, 0, 262191, 1, 0, 262207, 1, 0, 262208, 1, 0, 393215, 1, 0, 327680, 1, 0, 327681, 1, 0, 327682, 1, 0, 327686, 1, 0, 327687, 1, 0, 327688, 1, 0, 327691, 1, 0, 327692, 1, 0, 327727, 1, 0, 327743, 1, 0, 327744, 1, 0, 458751, 1, 0, 393226, 1, 0, 393227, 1, 0, 393228, 1, 0, 393263, 1, 0, 393277, 1, 0, 393278, 1, 0, 393279, 1, 0, 393280, 1, 0, 524287, 1, 0, 458762, 1, 0, 458763, 1, 0, 458783, 1, 0, 458799, 1, 0, 458813, 1, 0, 458814, 1, 0, 458815, 1, 0, 458816, 1, 0, 589823, 1, 0, 524289, 1, 0, 524290, 1, 0, 524291, 1, 0, 524292, 1, 0, 524293, 1, 0, 524294, 1, 0, 524295, 1, 0, 524296, 1, 0, 524297, 1, 0, 524298, 1, 0, 524334, 1, 0, 524335, 1, 0, 524347, 1, 0, 524348, 1, 0, 524349, 1, 0, 524350, 1, 0, 524351, 1, 0, 524352, 1, 0, 655359, 1, 0, 589827, 1, 0, 589850, 1, 0, 589871, 1, 0, 589883, 1, 0, 589884, 1, 0, 589885, 1, 0, 589886, 1, 0, 589887, 1, 0, 589888, 1, 0, 720895, 1, 0, 655360, 1, 0, 655361, 1, 0, 655363, 1, 0, 655407, 1, 0, 655417, 1, 0, 655418, 1, 0, 655419, 1, 0, 655420, 1, 0, 655421, 1, 0, 655422, 1, 0, 655423, 1, 0, 655424, 1, 0, 786431, 1, 0, 720896, 1, 0, 720897, 1, 0, 720909, 1, 0, 720916, 1, 0, 720943, 1, 0, 720953, 1, 0, 720954, 1, 0, 720955, 1, 0, 720956, 1, 0, 720957, 1, 0, 720958, 1, 0, 720959, 1, 0, 720960, 1, 0, 851967, 1, 0, 786432, 1, 0, 786433, 1, 0, 786434, 1, 0, 786435, 1, 0, 786436, 1, 0, 786437, 1, 0, 786438, 1, 0, 786439, 1, 0, 786440, 1, 0, 786441, 1, 0, 786442, 1, 0, 786443, 1, 0, 786444, 1, 0, 786445, 1, 0, 786469, 1, 0, 786470, 1, 0, 786476, 1, 0, 786477, 1, 0, 786478, 1, 0, 786479, 1, 0, 786486, 1, 0, 786487, 1, 0, 786488, 1, 0, 786489, 1, 0, 786490, 1, 0, 786491, 1, 0, 786492, 1, 0, 786493, 1, 0, 786494, 1, 0, 786495, 1, 0, 786496, 1, 0, 786497, 1, 0, 786498, 1, 0, 786499, 1, 0, 786500, 1, 0, 786501, 1, 0, 786502, 1, 0, 786503, 1, 0, 786504, 1, 0, 786505, 1, 0, 917503, 1, 0, 851968, 1, 0, 851969, 1, 0, 851970, 1, 0, 851971, 1, 0, 851972, 1, 0, 851973, 1, 0, 851974, 1, 0, 851975, 1, 0, 851976, 1, 0, 851977, 1, 0, 851978, 1, 0, 851979, 1, 0, 851980, 1, 0, 851981, 1, 0, 852005, 1, 0, 852006, 1, 0, 852012, 1, 0, 852013, 1, 0, 852014, 1, 0, 852015, 1, 0, 852022, 1, 0, 852023, 1, 0, 852024, 1, 0, 852025, 1, 0, 852026, 1, 0, 852027, 1, 0, 852028, 1, 0, 852029, 1, 0, 852030, 1, 0, 852031, 1, 0, 852032, 1, 0, 852033, 1, 0, 852034, 1, 0, 852035, 1, 0, 852036, 1, 0, 852037, 1, 0, 852038, 1, 0, 852039, 1, 0, 852040, 1, 0, 852041, 1, 0 )
+
+[node name="Portal" parent="." instance=ExtResource( 6 )]
+position = Vector2( 5300, 810 )
+nextLevel = "src/Levels/Level2.tscn"
+
+[node name="Void" parent="." instance=ExtResource( 7 )]
+position = Vector2( 3434, 1150 )
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 48, 32 )
+scale = Vector2( 0.1, 0.1 )
+
+[node name="Camera2D" parent="Player" index="2"]
+limit_right = 6000
+
+[node name="JumpNoise" type="AudioStreamPlayer" parent="Player"]
+stream = ExtResource( 9 )
+
+[node name="Enemy" parent="." instance=ExtResource( 3 )]
+position = Vector2( 641, 1279 )
+
+[node name="Enemy2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 961.108, 885.445 )
+scale = Vector2( 1.3, 1.3 )
+
+[node name="thunderbird" type="Sprite" parent="Enemy2"]
+position = Vector2( -15.6554, -0.660889 )
+scale = Vector2( 3.4118, 3.01483 )
+texture = ExtResource( 11 )
+
+[node name="Spike" parent="." instance=ExtResource( 5 )]
+position = Vector2( 514, 1247 )
+
+[node name="Spike11" parent="." instance=ExtResource( 5 )]
+position = Vector2( 352, 608 )
+scale = Vector2( 3.24, 3.24 )
+
+[node name="Spike3" parent="." instance=ExtResource( 5 )]
+position = Vector2( 766, 208 )
+scale = Vector2( 3.24, 3.24 )
+
+[node name="Spike4" parent="." instance=ExtResource( 5 )]
+position = Vector2( 592, 112 )
+rotation = 3.14014
+scale = Vector2( 3.24, 3.24 )
+
+[node name="Spike5" parent="." instance=ExtResource( 5 )]
+position = Vector2( 608, 512 )
+rotation = -3.14873
+scale = Vector2( 3.24, 3.24 )
+
+[node name="Spike7" parent="." instance=ExtResource( 5 )]
+position = Vector2( 544, 512 )
+rotation = 3.14014
+scale = Vector2( 3.24, 3.24 )
+
+[node name="Spike9" parent="." instance=ExtResource( 5 )]
+position = Vector2( 95, 512 )
+rotation = -3.13985
+scale = Vector2( 3.24, 3.24 )
+
+[node name="Spike10" parent="." instance=ExtResource( 5 )]
+position = Vector2( 160, 512 )
+rotation = 3.14014
+scale = Vector2( 3.24, 3.24 )
+
+[node name="Spike12" parent="." instance=ExtResource( 5 )]
+position = Vector2( 2994, 919 )
+rotation = 0.00833631
+scale = Vector2( 3.24, 3.24 )
+
+[node name="Spike13" parent="." instance=ExtResource( 5 )]
+position = Vector2( 3816, 285 )
+rotation = 0.00833631
+scale = Vector2( 3.24, 3.24 )
+
+[node name="Location" type="Label" parent="."]
+margin_left = 653.36
+margin_top = -161.638
+margin_right = 1099.36
+margin_bottom = -34.6377
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0.8, 0.145098, 0.145098, 1 )
+text = "British Columbia
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[editable path="Player"]
