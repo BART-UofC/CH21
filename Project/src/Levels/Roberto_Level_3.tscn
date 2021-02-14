@@ -4,7 +4,7 @@
 [ext_resource path="res://src/Actors/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://src/Actors/Enemy.tscn" type="PackedScene" id=3]
 [ext_resource path="res://assets/background.png" type="Texture" id=4]
-[ext_resource path="res://src/Levels/Spikes.tscn" type="PackedScene" id=5]
+[ext_resource path="res://src/Actors/Spikes.tscn" type="PackedScene" id=5]
 [ext_resource path="res://src/Actors/Portal.tscn" type="PackedScene" id=6]
 [ext_resource path="res://src/Actors/Void.tscn" type="PackedScene" id=7]
 
