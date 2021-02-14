@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://src/Levels/TitleScreen/Buttons/MenuButton.tscn" type="PackedScene" id=1]
+
+
+[node name="ContinueButton" instance=ExtResource( 1 )]
+scene_to_load = "res://src/Levels/Level1.tscn"
+
+[node name="Label" parent="." index="0"]
+margin_top = -2.0
+margin_right = -0.00012207
+margin_bottom = 0.999992
+text = "Continue"
