@@ -1,8 +1,10 @@
 extends "res://src/Actors/Actor.gd"
 
+
 func _ready() -> void:
 	set_physics_process(false)
 	_velocity.x = -speed.x
+	
 
 func die() -> void:
 	queue_free()

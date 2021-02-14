@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://assets/tileset.png" type="Texture" id=1]
 [ext_resource path="res://src/Actors/Player.tscn" type="PackedScene" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://src/Actors/Void.tscn" type="PackedScene" id=7]
 [ext_resource path="res://assets/grass.png" type="Texture" id=8]
 [ext_resource path="res://Sound/mountain-trials.ogg" type="AudioStream" id=9]
+[ext_resource path="res://assets/usask.png" type="Texture" id=10]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 80, 0, 80, 80, 0, 80 )
@@ -114,35 +115,95 @@ limit_right = 5500
 [node name="Enemy" parent="." instance=ExtResource( 3 )]
 position = Vector2( 665, 1223 )
 
-[node name="Enemy2" parent="." instance=ExtResource( 3 )]
-position = Vector2( 1781, 914 )
-
-[node name="Enemy3" parent="." instance=ExtResource( 3 )]
-position = Vector2( 1607, 913 )
-
-[node name="Enemy4" parent="." instance=ExtResource( 3 )]
-position = Vector2( 1415, 913 )
-
 [node name="Enemy5" parent="." instance=ExtResource( 3 )]
-position = Vector2( 1223, 912 )
+position = Vector2( 1126.12, 892.196 )
+scale = Vector2( 1.5, 1.5 )
 
-[node name="Enemy6" parent="." instance=ExtResource( 3 )]
-position = Vector2( 2744, 910 )
+[node name="usask" type="Sprite" parent="Enemy5"]
+position = Vector2( -0.253906, 1.66589 )
+scale = Vector2( 1.72574, 2.07506 )
+texture = ExtResource( 10 )
 
-[node name="Enemy7" parent="." instance=ExtResource( 3 )]
-position = Vector2( 2551, 910 )
+[node name="Enemy12" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1326.3, 898.619 )
+scale = Vector2( 1.5, 1.5 )
 
-[node name="Enemy8" parent="." instance=ExtResource( 3 )]
-position = Vector2( 2359, 908 )
+[node name="usask" type="Sprite" parent="Enemy12"]
+position = Vector2( -0.253906, 1.66589 )
+scale = Vector2( 1.72574, 2.07506 )
+texture = ExtResource( 10 )
 
-[node name="Enemy9" parent="." instance=ExtResource( 3 )]
-position = Vector2( 4039, 907 )
+[node name="Enemy13" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1533.45, 897.013 )
+scale = Vector2( 1.5, 1.5 )
 
-[node name="Enemy10" parent="." instance=ExtResource( 3 )]
-position = Vector2( 3843, 911 )
+[node name="usask" type="Sprite" parent="Enemy13"]
+position = Vector2( -0.253906, 1.66589 )
+scale = Vector2( 1.72574, 2.07506 )
+texture = ExtResource( 10 )
 
-[node name="Enemy11" parent="." instance=ExtResource( 3 )]
-position = Vector2( 3653, 909 )
+[node name="Enemy14" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1733.63, 898.542 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="usask" type="Sprite" parent="Enemy14"]
+position = Vector2( -0.253906, 1.66589 )
+scale = Vector2( 1.72574, 2.07506 )
+texture = ExtResource( 10 )
+
+[node name="Enemy15" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2376.78, 898.619 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="usask" type="Sprite" parent="Enemy15"]
+position = Vector2( -0.253906, 1.66589 )
+scale = Vector2( 1.72574, 2.07506 )
+texture = ExtResource( 10 )
+
+[node name="Enemy16" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2583.92, 897.013 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="usask" type="Sprite" parent="Enemy16"]
+position = Vector2( -0.253906, 1.66589 )
+scale = Vector2( 1.72574, 2.07506 )
+texture = ExtResource( 10 )
+
+[node name="Enemy17" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2780.84, 898.542 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="usask" type="Sprite" parent="Enemy17"]
+position = Vector2( -0.253906, 1.66589 )
+scale = Vector2( 1.72574, 2.07506 )
+texture = ExtResource( 10 )
+
+[node name="Enemy18" parent="." instance=ExtResource( 3 )]
+position = Vector2( 3638.49, 892.094 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="usask" type="Sprite" parent="Enemy18"]
+position = Vector2( -0.253906, 1.66589 )
+scale = Vector2( 1.72574, 2.07506 )
+texture = ExtResource( 10 )
+
+[node name="Enemy19" parent="." instance=ExtResource( 3 )]
+position = Vector2( 3845.63, 890.488 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="usask" type="Sprite" parent="Enemy19"]
+position = Vector2( -0.253906, 1.66589 )
+scale = Vector2( 1.72574, 2.07506 )
+texture = ExtResource( 10 )
+
+[node name="Enemy20" parent="." instance=ExtResource( 3 )]
+position = Vector2( 4047.45, 887.94 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="usask" type="Sprite" parent="Enemy20"]
+position = Vector2( -0.253906, 1.66589 )
+scale = Vector2( 1.72574, 2.07506 )
+texture = ExtResource( 10 )
 
 [node name="Spike" parent="." instance=ExtResource( 5 )]
 position = Vector2( 534, 1202 )
