@@ -1,7 +1,11 @@
 extends Actor
 
+
 export var stomp_impulse:  = 1000.0
+export var velocity_cutoff = 0.5
+#  velocity cutoff allows us to gradually decrease the vel of interrupted jump
 var direction: = Vector2.ZERO
+onready var sprite: Sprite = get_node("pain")
 
 func _on_EnemyDetector_area_entered(_area: Area2D) -> void:
 	_velocity = calculate_stomp_velocity(_velocity, stomp_impulse)
@@ -11,12 +15,20 @@ func _on_EnemyDetector_body_entered(_body: Node) -> void:
 	get_tree().reload_current_scene()
 # warning-ignore:return_value_discarded
 
-
+# loops every frame
+# all looping logic should be placed here
 func _physics_process(_delta: float) -> void:
 	var is_jump_interrupted: = Input.is_action_just_released("jump") and _velocity.y < 0.0
 	direction = get_direction()
 	_velocity = calculate_move_velocity(_velocity, direction, speed, is_jump_interrupted)
 	_velocity = move_and_slide(_velocity, FLOOR_NORMAL)
+	
+	# flips sprite based on direction we're moving in
+	if direction.x > 0:
+		sprite.flip_h = false
+	elif direction.x < 0:
+		sprite.flip_h = true
+		
 	
 func get_direction() -> Vector2:
 	
@@ -39,7 +51,8 @@ func calculate_move_velocity(linear_velocity: Vector2,
 		out.y = speed.y * direction_in.y
 	
 	if is_jump_interrupted:
-		out.y = 0
+		out.y *= velocity_cutoff
+		# player movement was to clucky when this was 0.0
 	
 	return out
 
