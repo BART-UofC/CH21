@@ -21,13 +21,13 @@ _global_script_class_icons={
 [application]
 
 config/name="Hello Wold"
-run/main_scene="res://src/Levels/LevelTemplate.tscn"
+run/main_scene="res://src/Levels/TitleScreen/TitleScreen.tscn"
 config/icon="res://icon.png"
 
 [autoload]
 
-AudioController="*res://autoloads/AudioController.tscn"
 Global="*res://src/global.gd"
+AudioController="*res://autoloads/AudioController.tscn"
 
 [display]
 
