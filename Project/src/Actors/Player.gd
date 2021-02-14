@@ -1,9 +1,11 @@
 extends Actor
+# some tweaks might be required as the scale of new sprite is different
 
 
 export var stomp_impulse:  = 1000.0
 export var velocity_cutoff = 0.5
 #  velocity cutoff allows us to gradually decrease the vel of interrupted jump
+
 var direction: = Vector2.ZERO
 onready var sprite: Sprite = get_node("pain")
 
