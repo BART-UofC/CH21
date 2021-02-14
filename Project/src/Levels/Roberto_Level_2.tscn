@@ -66,7 +66,7 @@ points = PoolVector2Array( 0, 0, 80, 0, 80, 80, 0, 80 )
 size = 50
 font_data = ExtResource( 11 )
 
-[node name="LevelTemplate" type="Node2D"]
+[node name="Roberto_Level_2" type="Node2D"]
 __meta__ = {
 "_edit_horizontal_guides_": [  ],
 "_edit_vertical_guides_": [ 4955.0 ]
@@ -155,15 +155,6 @@ position = Vector2( 2210.32, -218.465 )
 scale = Vector2( 1.3, 1.3 )
 
 [node name="mcgill" type="Sprite" parent="Enemy10"]
-position = Vector2( 2.67572, 3.98462 )
-scale = Vector2( 1.79178, 2.41626 )
-texture = ExtResource( 10 )
-
-[node name="Enemy11" parent="." instance=ExtResource( 3 )]
-position = Vector2( 1760, -701.897 )
-scale = Vector2( 1.3, 1.3 )
-
-[node name="mcgill" type="Sprite" parent="Enemy11"]
 position = Vector2( 2.67572, 3.98462 )
 scale = Vector2( 1.79178, 2.41626 )
 texture = ExtResource( 10 )

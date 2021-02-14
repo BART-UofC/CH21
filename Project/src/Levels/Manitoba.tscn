@@ -89,7 +89,7 @@ points = PoolVector2Array( 0, 0, 80, 0, 80, 80, 0, 80 )
 size = 50
 font_data = ExtResource( 10 )
 
-[node name="LevelTemplate" type="Node2D"]
+[node name="Manitoba" type="Node2D"]
 __meta__ = {
 "_edit_horizontal_guides_": [  ],
 "_edit_vertical_guides_": [ 4955.0 ]

@@ -78,7 +78,7 @@ points = PoolVector2Array( 80, 160, 0.312988, 160, 0.312988, 0.86499, 80, 0.8649
 size = 50
 font_data = ExtResource( 9 )
 
-[node name="LevelTemplate" type="Node2D"]
+[node name="Level3" type="Node2D"]
 __meta__ = {
 "_edit_horizontal_guides_": [ -2949.0, 1041.0 ],
 "_edit_vertical_guides_": [ 4955.0, -3588.0, 6287.0 ]
