@@ -20,19 +20,14 @@ func _on_EnemyDetector_area_entered(area: Area2D) -> void:
 func _on_EnemyDetector_body_entered(_body: Node) -> void:	
 	Global.currentScene = get_tree().get_current_scene().get_name()
 	queue_free()
-<<<<<<< Updated upstream
 	get_tree().reload_current_scene()
 # warning-ignore:return_value_discarded
-=======
 	get_tree().change_scene("src/Levels/deathScreen.tscn")
 	# warning-ignore:return_value_discarded
->>>>>>> Stashed changes
 
 # loops every frame
 # all looping logic should be placed here
 func _physics_process(_delta: float) -> void:
-	if Input.is_action_just_pressed("jump"):
-		$JumpNoise.play()
 		
 	var is_jump_interrupted: = Input.is_action_just_released("jump") and _velocity.y < 0.0
 	direction = get_direction()
